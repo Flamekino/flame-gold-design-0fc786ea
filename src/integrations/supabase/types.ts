@@ -14,7 +14,143 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      customization_options: {
+        Row: {
+          created_at: string
+          extra_price: number | null
+          id: string
+          is_required: boolean | null
+          menu_item_id: string | null
+          name: string
+          options: Json
+          type: string
+        }
+        Insert: {
+          created_at?: string
+          extra_price?: number | null
+          id?: string
+          is_required?: boolean | null
+          menu_item_id?: string | null
+          name: string
+          options?: Json
+          type: string
+        }
+        Update: {
+          created_at?: string
+          extra_price?: number | null
+          id?: string
+          is_required?: boolean | null
+          menu_item_id?: string | null
+          name?: string
+          options?: Json
+          type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "customization_options_menu_item_id_fkey"
+            columns: ["menu_item_id"]
+            isOneToOne: false
+            referencedRelation: "menu_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      menu_items: {
+        Row: {
+          category: string
+          created_at: string
+          description: string | null
+          id: string
+          image_url: string | null
+          is_available: boolean | null
+          name: string
+          price: number
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          is_available?: boolean | null
+          name: string
+          price: number
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          description?: string | null
+          id?: string
+          image_url?: string | null
+          is_available?: boolean | null
+          name?: string
+          price?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      orders: {
+        Row: {
+          created_at: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          delivery_address: string | null
+          delivery_fee: number | null
+          delivery_postcode: string | null
+          estimated_time: string | null
+          id: string
+          items: Json
+          order_type: string
+          payment_method: string
+          special_instructions: string | null
+          status: string
+          subtotal: number
+          total: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          customer_email: string
+          customer_name: string
+          customer_phone: string
+          delivery_address?: string | null
+          delivery_fee?: number | null
+          delivery_postcode?: string | null
+          estimated_time?: string | null
+          id?: string
+          items: Json
+          order_type: string
+          payment_method: string
+          special_instructions?: string | null
+          status?: string
+          subtotal: number
+          total: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          customer_email?: string
+          customer_name?: string
+          customer_phone?: string
+          delivery_address?: string | null
+          delivery_fee?: number | null
+          delivery_postcode?: string | null
+          estimated_time?: string | null
+          id?: string
+          items?: Json
+          order_type?: string
+          payment_method?: string
+          special_instructions?: string | null
+          status?: string
+          subtotal?: number
+          total?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
