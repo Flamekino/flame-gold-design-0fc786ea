@@ -53,11 +53,11 @@ const ContactSection = () => {
               <Clock className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-display text-lg font-semibold mb-2">Hours</h3>
               <div className="text-muted-foreground text-sm space-y-1">
-                <p>Mon: 12–10pm</p>
+                <p>Mon: 12:00–22:00</p>
                 <p>Tue: Closed</p>
-                <p>Wed–Thu: 12–10pm</p>
-                <p>Fri–Sat: 12–11pm</p>
-                <p>Sun: 4–10pm</p>
+                <p>Wed–Thu: 12:00–22:00</p>
+                <p>Fri–Sat: 12:00–23:00</p>
+                <p>Sun: 16:00–22:00</p>
               </div>
             </div>
           </div>
