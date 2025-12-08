@@ -40,8 +40,8 @@ const ContactSection = () => {
             <div className="p-6 rounded-lg border border-border bg-background text-center">
               <Phone className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-display text-lg font-semibold mb-2">Phone</h3>
-              <a href="tel:01204123456" className="text-muted-foreground hover:text-gold transition-colors">
-                01204 123 456
+              <a href="tel:07946410070" className="text-muted-foreground hover:text-gold transition-colors">
+                07946 410 070
               </a>
             </div>
             <div className="p-6 rounded-lg border border-border bg-background text-center">
@@ -52,7 +52,13 @@ const ContactSection = () => {
             <div className="p-6 rounded-lg border border-border bg-background text-center">
               <Clock className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-display text-lg font-semibold mb-2">Hours</h3>
-              <p className="text-muted-foreground">Mon-Sun: 12pm - 10pm</p>
+              <div className="text-muted-foreground text-sm space-y-1">
+                <p>Mon: 12–10pm</p>
+                <p>Tue: Closed</p>
+                <p>Wed–Thu: 12–10pm</p>
+                <p>Fri–Sat: 12–11pm</p>
+                <p>Sun: 4–10pm</p>
+              </div>
             </div>
           </div>
 
